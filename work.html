@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Work</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="transition"></div>
+
+<header>
+  <h2>zed<span>.</span></h2>
+
+  <button class="back-btn magnetic" onclick="goBack()">← Back</button>
+
+  <nav>
+    <a href="index.html">Home</a>
+  </nav>
+</header>
+
+<section class="work">
+
+  <h1 class="title">My Work</h1>
+  <p class="subtitle">Selected design projects</p>
+
+  <!-- FILTERS -->
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterWork('all', event)">All</button>
+    <button class="filter-btn" onclick="filterWork('brand', event)">Branding</button>
+    <button class="filter-btn" onclick="filterWork('ui', event)">UI Design</button>
+    <button class="filter-btn" onclick="filterWork('social', event)">Social Media</button>
+  </div>
+
+  <!-- WORK GRID -->
+  <div class="work-grid">
+
+    <!-- BRANDING -->
+    <div class="work-card magnetic" data-type="brand" onclick="openCase('brand')">
+      <img src="C:\Users\Felix Simon\Desktop\zed graphic design website\public\inserts\brand identity (2).jpeg">
+      <div class="work-info"><h3>Brand Identity</h3></div>
+    </div>
+
+    <div class="work-card magnetic" data-type="brand">
+      <img src="C:\Users\Felix Simon\Desktop\zed graphic design website\public\inserts\logo.jpeg">
+      <div class="work-info"><h3>Logo System</h3></div>
+    </div>
+
+    <div class="work-card magnetic" data-type="brand">
+      <img src="C:\Users\Felix Simon\Desktop\zed graphic design website\public\inserts\brand guidlines.jpeg">
+      <div class="work-info"><h3>Brand Guidelines</h3></div>
+    </div>
+
+    <!-- UI DESIGN -->
+    <div class="work-card magnetic" data-type="ui" onclick="openCase('ui')">
+      <img src="C:\Users\Felix Simon\Desktop\zed graphic design website\public\inserts\website ui (2).jpeg">
+      <div class="work-info"><h3>Website UI</h3></div>
+    </div>
+
+    <div class="work-card magnetic" data-type="ui">
+      <img src="C:\Users\Felix Simon\Desktop\zed graphic design website\public\inserts\mobile ui.jpeg">
+      <div class="work-info"><h3>Mobile App UI</h3></div>
+    </div>
+
+    <div class="work-card magnetic" data-type="ui">
+      <img src="C:\Users\Felix Simon\Desktop\zed graphic design website\public\inserts\dashboard ui.jpeg">
+      <div class="work-info"><h3>Dashboard UI</h3></div>
+    </div>
+
+    <!-- SOCIAL MEDIA -->
+    <div class="work-card magnetic" data-type="social">
+      <img src="C:\Users\Felix Simon\Desktop\zed graphic design website\public\inserts\social media design.jpeg">
+      <div class="work-info"><h3>Instagram Post</h3></div>
+    </div>
+
+    <div class="work-card magnetic" data-type="social">
+      <img src="C:\Users\Felix Simon\Desktop\zed graphic design website\public\inserts\add design.jpeg">
+      <div class="work-info"><h3>Ad Design</h3></div>
+    </div>
+
+    <div class="work-card magnetic" data-type="social">
+      <img src="C:\Users\Felix Simon\Desktop\zed graphic design website\public\inserts\campaing poster.jpeg">
+      <div class="work-info"><h3>Campaign Poster</h3></div>
+    </div>
+
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
