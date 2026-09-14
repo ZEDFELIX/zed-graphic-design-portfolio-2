@@ -2,12 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Work</title>
+  <title>My Work — Zed | Graphic Designer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Selected design projects by Zed — brand identity, UI/UX, and social media design.">
+  <meta property="og:title" content="My Work — Zed | Graphic Designer">
+  <meta property="og:description" content="Selected design projects by Zed — brand identity, UI/UX, and social media design.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="My Work — Zed | Graphic Designer">
+  <meta name="twitter:description" content="Selected design projects by Zed — brand identity, UI/UX, and social media design.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23080808'/%3E%3Ctext x='32' y='44' font-family='Arial' font-size='40' font-weight='700' fill='%2315ff00' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <div class="transition"></div>
 
@@ -16,10 +26,12 @@
 
   <button class="back-btn magnetic" onclick="goBack()">← Back</button>
 
-  <nav>
+  <nav id="nav" aria-label="Main navigation">
     <a href="index.html">Home</a>
   </nav>
 </header>
+
+<main id="main-content">
 
 <section class="work">
 
@@ -38,56 +50,58 @@
   <div class="work-grid">
 
     <!-- BRANDING -->
-    <div class="work-card magnetic" data-type="brand" onclick="openCase('brand')">
-      <img src="C:\Users\Felix Simon\Desktop\zed graphic design website\public\inserts\brand identity (2).jpeg">
+    <div class="work-card magnetic" data-type="brand" role="button" aria-label="Open Brand Identity case study" tabindex="0" onclick="openCase('brand')">
+      <img src="brand identity (2).jpeg" alt="Brand identity project by Zed">
       <div class="work-info"><h3>Brand Identity</h3></div>
     </div>
 
     <div class="work-card magnetic" data-type="brand">
-      <img src="C:\Users\Felix Simon\Desktop\zed graphic design website\public\inserts\logo.jpeg">
+      <img src="logo.jpeg" alt="Logo system design by Zed">
       <div class="work-info"><h3>Logo System</h3></div>
     </div>
 
     <div class="work-card magnetic" data-type="brand">
-      <img src="C:\Users\Felix Simon\Desktop\zed graphic design website\public\inserts\brand guidlines.jpeg">
+      <img src="brand guidlines.jpeg" alt="Brand guidelines design by Zed">
       <div class="work-info"><h3>Brand Guidelines</h3></div>
     </div>
 
     <!-- UI DESIGN -->
-    <div class="work-card magnetic" data-type="ui" onclick="openCase('ui')">
-      <img src="C:\Users\Felix Simon\Desktop\zed graphic design website\public\inserts\website ui (2).jpeg">
+    <div class="work-card magnetic" data-type="ui" role="button" aria-label="Open Website UI case study" tabindex="0" onclick="openCase('ui')">
+      <img src="website ui (2).jpeg" alt="Website UI design project by Zed">
       <div class="work-info"><h3>Website UI</h3></div>
     </div>
 
     <div class="work-card magnetic" data-type="ui">
-      <img src="C:\Users\Felix Simon\Desktop\zed graphic design website\public\inserts\mobile ui.jpeg">
+      <img src="mobile ui.jpeg" alt="Mobile app UI design by Zed">
       <div class="work-info"><h3>Mobile App UI</h3></div>
     </div>
 
     <div class="work-card magnetic" data-type="ui">
-      <img src="C:\Users\Felix Simon\Desktop\zed graphic design website\public\inserts\dashboard ui.jpeg">
+      <img src="dashboard ui.jpeg" alt="Dashboard UI design by Zed">
       <div class="work-info"><h3>Dashboard UI</h3></div>
     </div>
 
     <!-- SOCIAL MEDIA -->
     <div class="work-card magnetic" data-type="social">
-      <img src="C:\Users\Felix Simon\Desktop\zed graphic design website\public\inserts\social media design.jpeg">
+      <img src="social media design.jpeg" alt="Social media post design by Zed">
       <div class="work-info"><h3>Instagram Post</h3></div>
     </div>
 
     <div class="work-card magnetic" data-type="social">
-      <img src="C:\Users\Felix Simon\Desktop\zed graphic design website\public\inserts\add design.jpeg">
+      <img src="add design.jpeg" alt="Ad design by Zed">
       <div class="work-info"><h3>Ad Design</h3></div>
     </div>
 
     <div class="work-card magnetic" data-type="social">
-      <img src="C:\Users\Felix Simon\Desktop\zed graphic design website\public\inserts\campaing poster.jpeg">
+      <img src="campaing poster.jpeg" alt="Campaign poster design by Zed">
       <div class="work-info"><h3>Campaign Poster</h3></div>
     </div>
 
   </div>
 
 </section>
+
+</main>
 
 <script src="script.js"></script>
 </body>

@@ -478,3 +478,44 @@ p.reveal {
   color: #555;
   max-width: 520px;
 }
+/* =========================
+   ACCESSIBILITY
+========================= */
+:focus-visible{
+  outline: 2px solid var(--main-color);
+  outline-offset: 3px;
+}
+:focus:not(:focus-visible){
+  outline: none;
+}
+.skip-link{
+  position: absolute;
+  top: -48px;
+  left: 16px;
+  z-index: 10000;
+  background: var(--main-color);
+  color: #080808;
+  padding: 10px 16px;
+  border-radius: 0 0 10px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: top 0.2s ease;
+}
+.skip-link:focus{
+  top: 0;
+}
+@media (prefers-reduced-motion: reduce){
+  html{
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after{
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .skip-link{
+    transition: none;
+  }
+}
