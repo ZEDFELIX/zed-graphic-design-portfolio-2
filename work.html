@@ -1,108 +1,212 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Work — Zed | Graphic Designer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Selected design projects by Zed — brand identity, UI/UX, and social media design.">
-  <meta property="og:title" content="My Work — Zed | Graphic Designer">
-  <meta property="og:description" content="Selected design projects by Zed — brand identity, UI/UX, and social media design.">
+  <title>Work â€” ZED | Graphic Designer</title>
+  <meta name="description" content="Full gallery of design work by Zed â€” brand identity, logo, UI/UX, social media and posters.">
+  <meta property="og:title" content="Work â€” ZED | Graphic Designer">
+  <meta property="og:description" content="Full gallery of design work by Zed.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="My Work — Zed | Graphic Designer">
-  <meta name="twitter:description" content="Selected design projects by Zed — brand identity, UI/UX, and social media design.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23080808'/%3E%3Ctext x='32' y='44' font-family='Arial' font-size='40' font-weight='700' fill='%2315ff00' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23ffe53d'/%3E%3Ctext x='32' y='45' font-family='Arial Black' font-size='34' font-weight='900' fill='%2314121c' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="page-work">
 
-<a href="#main-content" class="skip-link">Skip to main content</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="transition" aria-hidden="true"></div>
 
-<div class="transition"></div>
+  <header class="site-header" id="siteHeader">
+    <a class="logo-badge" href="index.html" aria-label="ZED â€” home"><span>zed</span>â˜…</a>
 
-<header>
-  <h2>zed<span>.</span></h2>
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="work.html" aria-current="page">Work</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
 
-  <button class="back-btn magnetic" onclick="goBack()">← Back</button>
+    <a class="nav-cta" href="index.html#contact">Hire me <i class="fa-solid fa-arrow-right"></i></a>
 
-  <nav id="nav" aria-label="Main navigation">
-    <a href="index.html">Home</a>
-  </nav>
-</header>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span>
+    </button>
+  </header>
 
-<main id="main-content">
+  <main id="main">
 
-<section class="work">
+    <section class="page-hero">
+      <div class="container">
+        <p class="kicker"><span class="tag tag--lime">the archive</span></p>
+        <h1 class="page-title">The <span class="outline-text">work</span> <span class="blink" aria-hidden="true">â–®</span></h1>
+        <p class="page-intro">Every project, loud and proud. Tap a card for the case notes.</p>
+      </div>
+    </section>
 
-  <h1 class="title">My Work</h1>
-  <p class="subtitle">Selected design projects</p>
+    <section class="section work-section">
+      <div class="container">
 
-  <!-- FILTERS -->
-  <div class="filter-bar">
-    <button class="filter-btn active" onclick="filterWork('all', event)">All</button>
-    <button class="filter-btn" onclick="filterWork('brand', event)">Branding</button>
-    <button class="filter-btn" onclick="filterWork('ui', event)">UI Design</button>
-    <button class="filter-btn" onclick="filterWork('social', event)">Social Media</button>
-  </div>
+        <div class="filter-bar reveal" role="group" aria-label="Filter projects">
+          <button class="filter-chip is-active" data-filter="all" onclick="filterWork('all', this)" aria-pressed="true">ALL</button>
+          <button class="filter-chip" data-filter="brand" onclick="filterWork('brand', this)" aria-pressed="false">BRANDING</button>
+          <button class="filter-chip" data-filter="ui" onclick="filterWork('ui', this)" aria-pressed="false">UI DESIGN</button>
+          <button class="filter-chip" data-filter="social" onclick="filterWork('social', this)" aria-pressed="false">SOCIAL</button>
+        </div>
 
-  <!-- WORK GRID -->
-  <div class="work-grid">
+        <div class="gallery">
 
-    <!-- BRANDING -->
-    <div class="work-card magnetic" data-type="brand" role="button" aria-label="Open Brand Identity case study" tabindex="0" onclick="openCase('brand')">
-      <img src="brand identity (2).jpeg" alt="Brand identity project by Zed">
-      <div class="work-info"><h3>Brand Identity</h3></div>
+          <article class="tile tilt-left" data-type="brand">
+            <a class="tile-inner reveal" href="case.html?type=brand">
+              <div class="tile-img"><img src="brand identity (2).jpeg" alt="Brand identity project by Zed" loading="lazy"></div>
+              <div class="tile-caption">
+                <span class="tag tag--yellow">BRANDING</span>
+                <h3>Brand Identity</h3>
+                <span class="tile-go">case +</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="tile tilt-right" data-type="brand">
+            <a class="tile-inner reveal" href="case.html?type=logo">
+              <div class="tile-img"><img src="logo.jpeg" alt="Logo system design by Zed" loading="lazy"></div>
+              <div class="tile-caption">
+                <span class="tag tag--cyan">BRANDING</span>
+                <h3>Logo System</h3>
+                <span class="tile-go">case +</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="tile tilt-left" data-type="brand">
+            <a class="tile-inner reveal" href="case.html?type=guidelines">
+              <div class="tile-img"><img src="brand guidlines.jpeg" alt="Brand guidelines design by Zed" loading="lazy"></div>
+              <div class="tile-caption">
+                <span class="tag tag--pink">BRANDING</span>
+                <h3>Brand Guidelines</h3>
+                <span class="tile-go">case +</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="tile tilt-right" data-type="ui">
+            <a class="tile-inner reveal" href="case.html?type=ui">
+              <div class="tile-img"><img src="website ui (2).jpeg" alt="Website UI design project by Zed" loading="lazy"></div>
+              <div class="tile-caption">
+                <span class="tag tag--yellow">UI DESIGN</span>
+                <h3>Website UI</h3>
+                <span class="tile-go">case +</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="tile tilt-left" data-type="ui">
+            <a class="tile-inner reveal" href="case.html?type=mobile">
+              <div class="tile-img"><img src="mobile ui.jpeg" alt="Mobile app UI design by Zed" loading="lazy"></div>
+              <div class="tile-caption">
+                <span class="tag tag--lime">UI DESIGN</span>
+                <h3>Mobile App UI</h3>
+                <span class="tile-go">case +</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="tile tilt-right" data-type="ui">
+            <a class="tile-inner reveal" href="case.html?type=dashboard">
+              <div class="tile-img"><img src="dashboard ui.jpeg" alt="Dashboard UI design by Zed" loading="lazy"></div>
+              <div class="tile-caption">
+                <span class="tag tag--pink">UI DESIGN</span>
+                <h3>Dashboard UI</h3>
+                <span class="tile-go">case +</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="tile tilt-left" data-type="social">
+            <a class="tile-inner reveal" href="case.html?type=social">
+              <div class="tile-img"><img src="social media design.jpeg" alt="Social media post design by Zed" loading="lazy"></div>
+              <div class="tile-caption">
+                <span class="tag tag--yellow">SOCIAL</span>
+                <h3>Instagram Post</h3>
+                <span class="tile-go">case +</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="tile tilt-right" data-type="social">
+            <a class="tile-inner reveal" href="case.html?type=ad">
+              <div class="tile-img"><img src="add design.jpeg" alt="Ad design by Zed" loading="lazy"></div>
+              <div class="tile-caption">
+                <span class="tag tag--cyan">SOCIAL</span>
+                <h3>Ad Design</h3>
+                <span class="tile-go">case +</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="tile tilt-left" data-type="social">
+            <a class="tile-inner reveal" href="case.html?type=poster">
+              <div class="tile-img"><img src="campaing poster.jpeg" alt="Campaign poster design by Zed" loading="lazy"></div>
+              <div class="tile-caption">
+                <span class="tag tag--pink">SOCIAL</span>
+                <h3>Campaign Poster</h3>
+                <span class="tile-go">case +</span>
+              </div>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2 class="cta-title reveal">Like what you see? <span class="highlight">Letâ€™s talk.</span></h2>
+        <a class="big-btn big-btn--yellow reveal" href="index.html#contact">Hire me <i class="fa-solid fa-bolt"></i></a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <p class="footer-wordmark"><span class="outline-text">ZED</span><span class="footer-dot">â˜…</span></p>
+        <p class="footer-slogan">graphic design <em>with the volume up</em></p>
+      </div>
+
+      <div class="footer-mid">
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="work.html">Work</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <ul class="footer-socials">
+          <li><a href="https://www.instagram.com/felix.simon.zed?igsh=ODFnOGdocjBvazc=" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="https://x.com/Socialprince7?t=-RM1I7BO3xX-REW-ccS9wA&s=09" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li><a href="https://wa.me/qr/5HLQVSSQND4LG1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+          <li><a href="https://www.tiktok.com/@4zed2zed?_t=8rCYGFppRbT&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/felix-simon-9a4461257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="https://github.com/ZEDFELIX" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Â© <span id="year">2026</span> Zed Designer â€” all rights reserved.</p>
+        <a class="to-top" href="#top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
     </div>
+  </footer>
 
-    <div class="work-card magnetic" data-type="brand">
-      <img src="logo.jpeg" alt="Logo system design by Zed">
-      <div class="work-info"><h3>Logo System</h3></div>
-    </div>
-
-    <div class="work-card magnetic" data-type="brand">
-      <img src="brand guidlines.jpeg" alt="Brand guidelines design by Zed">
-      <div class="work-info"><h3>Brand Guidelines</h3></div>
-    </div>
-
-    <!-- UI DESIGN -->
-    <div class="work-card magnetic" data-type="ui" role="button" aria-label="Open Website UI case study" tabindex="0" onclick="openCase('ui')">
-      <img src="website ui (2).jpeg" alt="Website UI design project by Zed">
-      <div class="work-info"><h3>Website UI</h3></div>
-    </div>
-
-    <div class="work-card magnetic" data-type="ui">
-      <img src="mobile ui.jpeg" alt="Mobile app UI design by Zed">
-      <div class="work-info"><h3>Mobile App UI</h3></div>
-    </div>
-
-    <div class="work-card magnetic" data-type="ui">
-      <img src="dashboard ui.jpeg" alt="Dashboard UI design by Zed">
-      <div class="work-info"><h3>Dashboard UI</h3></div>
-    </div>
-
-    <!-- SOCIAL MEDIA -->
-    <div class="work-card magnetic" data-type="social">
-      <img src="social media design.jpeg" alt="Social media post design by Zed">
-      <div class="work-info"><h3>Instagram Post</h3></div>
-    </div>
-
-    <div class="work-card magnetic" data-type="social">
-      <img src="add design.jpeg" alt="Ad design by Zed">
-      <div class="work-info"><h3>Ad Design</h3></div>
-    </div>
-
-    <div class="work-card magnetic" data-type="social">
-      <img src="campaing poster.jpeg" alt="Campaign poster design by Zed">
-      <div class="work-info"><h3>Campaign Poster</h3></div>
-    </div>
-
-  </div>
-
-</section>
-
-</main>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

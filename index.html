@@ -2,211 +2,333 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Zed | Graphic Designer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Zed — graphic designer specializing in brand identity, UI/UX, and social media design.">
-  <meta property="og:title" content="Zed | Graphic Designer">
-  <meta property="og:description" content="Zed — graphic designer specializing in brand identity, UI/UX, and social media design.">
+  <title>ZED — Graphic Designer</title>
+  <meta name="description" content="ZED is a graphic designer making loud, unforgettable brand identity, UI/UX and social design.">
+  <meta property="og:title" content="ZED — Graphic Designer">
+  <meta property="og:description" content="Bold branding, UI/UX and campaign design by Zed.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Zed | Graphic Designer">
-  <meta name="twitter:description" content="Zed — graphic designer specializing in brand identity, UI/UX, and social media design.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23080808'/%3E%3Ctext x='32' y='44' font-family='Arial' font-size='40' font-weight='700' fill='%2315ff00' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23ffe53d'/%3E%3Ctext x='32' y='45' font-family='Arial Black' font-size='34' font-weight='900' fill='%2314121c' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="home">
+<body class="page-home">
 
-<a href="#main-content" class="skip-link">Skip to main content</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="transition" aria-hidden="true"></div>
 
-<!-- PAGE TRANSITION -->
-<div class="transition"></div>
-<!-- FLOATING BACKGROUND BOXES -->
-<div class="cube cube1">
-    <div class="face front"></div>
-    <div class="face back"></div>
-    <div class="face right"></div>
-    <div class="face left"></div>
-    <div class="face top"></div>
-    <div class="face bottom"></div>
+  <div class="topbar" aria-hidden="true">
+    <div class="topbar-track">
+      <span>★ open for work</span>
+      <span>open for work ★</span>
+      <span>hit me up →</span>
+      <span>★ open for work</span>
+      <span>open for work ★</span>
+      <span>hit me up →</span>
+    </div>
   </div>
 
-  <div class="cube cube2">
-    <div class="face front"></div>
-    <div class="face back"></div>
-    <div class="face right"></div>
-    <div class="face left"></div>
-    <div class="face top"></div>
-    <div class="face bottom"></div>
-  </div>
+  <header class="site-header" id="siteHeader">
+    <a class="logo-badge" href="index.html" aria-label="ZED — home"><span>zed</span>★</a>
 
-</div>
-<header>
-  <h2>zed<span>.</span></h2>
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-  <div class="menu-toggle" role="button" aria-label="Toggle menu" tabindex="0" onclick="toggleMenu()">☰</div>
+    <a class="nav-cta" href="#contact">Hire me <i class="fa-solid fa-arrow-right"></i></a>
 
-  <nav id="nav" aria-label="Main navigation">
-    <a href="#home">Home</a>
-    <a href="work.html">Work</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<main id="main-content">
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <h1 class="reveal"><span>I'M ZED</span><br>A GRAPHIC DESIGNER</h1>
-  <p class="reveal">I build brands, create sinages and visual identities that stand out.</p>
-
-  <div class="hero-buttons">
-
-    <button class="blob-btn magnetic" onclick="goWork()">
-      See My Work
-
-      <span class="blob-btn__inner">
-        <span class="blob-btn__blobs">
-          <span class="blob-btn__blob"></span>
-          <span class="blob-btn__blob"></span>
-          <span class="blob-btn__blob"></span>
-          <span class="blob-btn__blob"></span>
-        </span>
-      </span>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span>
     </button>
+  </header>
 
-    <!-- REQUIRED SVG FOR BLOB EFFECT -->
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none;">
-      <defs>
-        <filter id="goo">
-          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-          <feColorMatrix in="blur" mode="matrix"
-            values="1 0 0 0 0
-                    0 1 0 0 0
-                    0 0 1 0 0
-                    0 0 0 21 -7" result="goo">
-          </feColorMatrix>
-          <feBlend in2="goo" in="SourceGraphic"></feBlend>
-        </filter>
-      </defs>
-    </svg>
+  <main id="main">
 
-  </div>
-</section>
+    <section class="hero" id="top">
+      <div class="hero-float hero-float--a" aria-hidden="true">✳</div>
+      <div class="hero-float hero-float--b" aria-hidden="true">✦</div>
 
-<!-- PORTFOLIO -->
-<section class="section" id="portfolio">
-  <h2>My Work</h2>
+      <div class="container">
+        <p class="hero-kicker"><span class="tag tag--pink">portfolio v2.0</span> <span class="tag tag--cyan">est. early days</span></p>
 
-  <div class="portfolio">
+        <h1 class="hero-title">
+          <span class="hero-line hero-line--one"><em>graphic</em></span>
+          <span class="hero-line hero-line--two"><b>design</b><em class="hero-star" aria-hidden="true">✳</em></span>
+          <span class="hero-line hero-line--three"><span class="outline-text">by&nbsp;zed</span><em class="hero-soon">fresh&nbsp;work</em></span>
+        </h1>
 
-    <div class="card magnetic" role="button" aria-label="View the Brand Identity project" tabindex="0" onclick="goWork()">
-      <img src="brand identity (2).jpeg" alt="Brand identity project by Zed">
-      <h3>Brand Identity</h3>
+        <p class="hero-sub">
+          Brands, UI &amp; campaigns that refuse to be ignored.
+          Colorful, confident and built to make people <strong>look twice.</strong>
+        </p>
+
+        <div class="hero-row">
+          <a class="big-btn big-btn--black" href="work.html">See the work <i class="fa-solid fa-arrow-down"></i></a>
+
+          <a class="hero-card tilt-right" href="work.html" aria-label="Open brand identity project">
+            <img src="brand identity (2).jpeg" alt="Brand identity project by Zed">
+            <span class="hero-card-tag tag--yellow">BRANDING</span>
+          </a>
+
+          <a class="big-btn big-btn--outline" href="#contact">Say hi! <i class="fa-solid fa-arrow-up-right"></i></a>
+        </div>
+
+        <ul class="hero-chips">
+          <li>#brandidentity</li>
+          <li>#uiux</li>
+          <li>#socialmedia</li>
+          <li>#posters</li>
+          <li>#logo</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>BRAND IDENTITY</span><span>✦</span><span>UI / UX</span><span>✦</span><span>SOCIAL MEDIA</span><span>✦</span><span>LOGO</span><span>✦</span><span>POSTERS</span><span>✦</span><span>MARKETING</span><span>✦</span><span>ENGRAVING</span><span>✦</span><span>BRAND IDENTITY</span><span>✦</span><span>UI / UX</span><span>✦</span><span>SOCIAL MEDIA</span><span>✦</span><span>LOGO</span><span>✦</span><span>POSTERS</span><span>✦</span><span>MARKETING</span><span>✦</span><span>ENGRAVING</span><span>✦</span>
+      </div>
     </div>
 
-    <div class="card magnetic" role="button" aria-label="View the Website UI project" tabindex="0" onclick="goWork()">
-      <img src="website ui (2).jpeg" alt="Website UI design project by Zed">
-      <h3>Website UI</h3>
+    <section class="section work-section" id="work">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker"><span class="tag tag--lime">01</span> Selected work</p>
+          <h2 class="section-title">The <span class="highlight">good</span> stuff<span class="blink" aria-hidden="true">▮</span></h2>
+          <p class="section-intro">A few favourites pulled from the archive. Click the tiles for the full tour.</p>
+        </div>
+
+        <div class="tiles">
+          <article class="tile tilt-left">
+            <a class="tile-inner reveal" href="work.html">
+              <div class="tile-img"><img src="brand identity (2).jpeg" alt="Brand identity project by Zed" loading="lazy"></div>
+              <div class="tile-caption">
+                <span class="tag tag--yellow">BRANDING</span>
+                <h3>Brand Identity</h3>
+                <span class="tile-go">view +</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="tile tilt-right">
+            <a class="tile-inner reveal" href="work.html">
+              <div class="tile-img"><img src="website ui (2).jpeg" alt="Website UI design project by Zed" loading="lazy"></div>
+              <div class="tile-caption">
+                <span class="tag tag--cyan">UI/UX</span>
+                <h3>Website UI</h3>
+                <span class="tile-go">view +</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="tile tilt-left">
+            <a class="tile-inner reveal" href="work.html">
+              <div class="tile-img"><img src="social media design.jpeg" alt="Social media design project by Zed" loading="lazy"></div>
+              <div class="tile-caption">
+                <span class="tag tag--pink">SOCIAL</span>
+                <h3>Social Media</h3>
+                <span class="tile-go">view +</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="tile tile--dashed reveal">
+            <a class="tile-inner tile-inner--dashed" href="work.html">
+              <span class="dash-plus" aria-hidden="true">+</span>
+              <div class="tile-caption">
+                <span class="tag tag--yellow">MORE</span>
+                <h3>See the whole archive</h3>
+                <span class="tile-go">9 projects — go go go →</span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker"><span class="tag tag--yellow">02</span> Services</p>
+          <h2 class="section-title">What I <span class="highlight">do</span></h2>
+        </div>
+
+        <div class="service-grid">
+          <div class="service-cell cell--yellow reveal">
+            <span class="service-emoji" aria-hidden="true">🎯</span>
+            <h3>Logo Design</h3>
+            <p>Marks people remember at 50mph.</p>
+          </div>
+          <div class="service-cell cell--pink reveal">
+            <span class="service-emoji" aria-hidden="true">🏷</span>
+            <h3>Branding</h3>
+            <p>Identities with a point of view.</p>
+          </div>
+          <div class="service-cell cell--cyan reveal">
+            <span class="service-emoji" aria-hidden="true">🖥</span>
+            <h3>UI/UX Design</h3>
+            <p>Interfaces that feel effortless.</p>
+          </div>
+          <div class="service-cell cell--lime reveal">
+            <span class="service-emoji" aria-hidden="true">📣</span>
+            <h3>Social Media</h3>
+            <p>Feed systems that stop the scroll.</p>
+          </div>
+          <div class="service-cell cell--ink reveal">
+            <span class="service-emoji" aria-hidden="true">📈</span>
+            <h3>Marketing Design</h3>
+            <p>Ads, banners and billboards.</p>
+          </div>
+          <div class="service-cell cell--cream reveal">
+            <span class="service-emoji" aria-hidden="true">🖼</span>
+            <h3>Posters</h3>
+            <p>Campaign visuals with volume.</p>
+          </div>
+          <div class="service-cell cell--pink reveal">
+            <span class="service-emoji" aria-hidden="true">✒️</span>
+            <h3>Engraving</h3>
+            <p>Craft detail in every mark.</p>
+          </div>
+          <div class="service-cell cell--yellow reveal">
+            <span class="service-emoji" aria-hidden="true">💥</span>
+            <h3>Your wild idea</h3>
+            <p>Something weird? Let’s talk.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-left">
+            <p class="kicker"><span class="tag tag--pink">03</span> About</p>
+            <h2 class="about-big"><span class="outline-text-dark">Who is</span> this <span class="highlight">guy?</span></h2>
+
+            <div class="about-stickers">
+              <div class="sticker sticker--pink tilt-left">drawn to design since day one</div>
+              <div class="sticker sticker--yellow tilt-right">self-trained ✦ always learning</div>
+            </div>
+          </div>
+
+          <div class="about-right">
+            <p>
+              Short answer: a designer. Long answer: someone who got hooked drawing
+              people and things from a young age, couldn’t stop, and turned that
+              obsession into a craft. After high school I stopped calling it a hobby
+              and started treating it like a job — refining the eye, the process and
+              the taste until design became the most natural thing in the world.
+            </p>
+            <p>
+              Today that means identity, interface and campaign work that’s bold,
+              considered and made to stand out in a very loud feed.
+            </p>
+
+            <ul class="checklist">
+              <li class="reveal"><span class="check">✔</span> Multidisciplinary — identity · UI · campaigns</li>
+              <li class="reveal"><span class="check">✔</span> Obsessive about details</li>
+              <li class="reveal"><span class="check">✔</span> Open for freelance worldwide</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="stats reveal">
+          <div class="stat stat--ink"><strong>4+</strong><span>years crafting</span></div>
+          <div class="stat stat--yellow"><strong>50+</strong><span>projects delivered</span></div>
+          <div class="stat stat--cyan"><strong>6</strong><span>design gigs mastered</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="word-bg" aria-hidden="true">LET’S GO</div>
+      <div class="container">
+        <h2 class="cta-title reveal">Got a <span class="highlight">project?</span><br>Let’s make it <em>loud</em></h2>
+        <p class="cta-text">Tell me what you need — logo, site, feed, poster, all of it. I’ll bring the color.</p>
+        <a class="big-btn big-btn--yellow reveal" href="#contact">Start a project <i class="fa-solid fa-bolt"></i></a>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker"><span class="tag tag--cyan">05</span> Contact</p>
+          <h2 class="section-title">Say <span class="highlight">hello!</span></h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p>Best place to reach me. Briefs, half-ideas, voice notes — all welcome.</p>
+            <div class="contact-channels">
+              <a class="chip chip--pink" href="https://wa.me/qr/5HLQVSSQND4LG1" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+              <a class="chip chip--cyan" href="https://www.instagram.com/felix.simon.zed?igsh=ODFnOGdocjBvazc=" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> DM on Instagram</a>
+              <a class="chip chip--cream" href="https://x.com/Socialprince7?t=-RM1I7BO3xX-REW-ccS9wA&s=09" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i> X / Twitter</a>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" novalidate>
+            <div class="field">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="message">What’s the vibe?</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button class="big-btn big-btn--black" type="button" onclick="sendMessage()">Send it! <i class="fa-solid fa-paper-plane"></i></button>
+            <p class="form-status" id="response" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <p class="footer-wordmark"><span class="outline-text">ZED</span><span class="footer-dot">★</span></p>
+        <p class="footer-slogan">graphic design <em>with the volume up</em></p>
+      </div>
+
+      <div class="footer-mid">
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="work.html">Work</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <ul class="footer-socials">
+          <li><a href="https://www.instagram.com/felix.simon.zed?igsh=ODFnOGdocjBvazc=" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="https://x.com/Socialprince7?t=-RM1I7BO3xX-REW-ccS9wA&s=09" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li><a href="https://wa.me/qr/5HLQVSSQND4LG1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+          <li><a href="https://www.tiktok.com/@4zed2zed?_t=8rCYGFppRbT&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/felix-simon-9a4461257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="https://github.com/ZEDFELIX" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Zed Designer — all rights reserved.</p>
+        <a class="to-top" href="#top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
     </div>
+  </footer>
 
-    <div class="card magnetic" role="button" aria-label="View the Social Media project" tabindex="0" onclick="goWork()">
-      <img src="social media design.jpeg" alt="Social media design project by Zed">
-      <h3>Social Media</h3>
-    </div>
-
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="section" id="services">
-  <h2>Services</h2>
-
-  <div class="portfolio">
-    <div class="card"><h3>Logo Design</h3></div>
-     <div class="card"><h3>Billboad design</h3></div>
-      <div class="card"><h3>banner design</h3></div>
-    <div class="card"><h3>UI/UX Design</h3></div>
-     <div class="card"><h3>engraving</h3></div>
-      <div class="card"><h3>branding</h3></div>
-    <div class="card"><h3>Marketing Design</h3></div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section" id="about">
-  <h2>About Me</h2>
-  <p>I discovered my passion for design at a young age. As I began exploring drawing and creating visuals for people and objects around me, my interest naturally grew deeper.
-
-Over time, that early curiosity stayed with me and continued to shape who I am. After completing high school, I came to understand that design was more than just a passion—it was something I was naturally inclined toward.
-
-Learning and improving didn’t feel difficult, because I already had a strong foundation and intuition for it. From there, I focused on refining my skills, and through consistent effort and growth, I developed into a professional graphic designer. </p>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <h2>Let’s Work Together</h2>
-
-  <button class="blob-btn magnetic" onclick="scrollToSection('contact')">
-    Start Project
-
-    <span class="blob-btn__inner">
-      <span class="blob-btn__blobs">
-        <span class="blob-btn__blob"></span>
-        <span class="blob-btn__blob"></span>
-        <span class="blob-btn__blob"></span>
-        <span class="blob-btn__blob"></span>
-      </span>
-    </span>
-  </button>
-</section>
-
-<!-- CONTACT -->
-<section class="section contact" id="contact">
-  <h2>Contact</h2>
-
-  <input type="text" id="name" placeholder="Name">
-  <input type="email" id="email" placeholder="Email">
-  <textarea id="message" placeholder="Message"></textarea>
-
-  <button class="blob-btn magnetic" onclick="sendMessage()">
-    Send Message
-
-    <span class="blob-btn__inner">
-      <span class="blob-btn__blobs">
-        <span class="blob-btn__blob"></span>
-        <span class="blob-btn__blob"></span>
-        <span class="blob-btn__blob"></span>
-        <span class="blob-btn__blob"></span>
-      </span>
-    </span>
-  </button>
-
-  <p id="response"></p>
-</section>
-
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Zed Designer</p>
-
-  <div class="socials">
-    <a href="https://www.instagram.com/felix.simon.zed?igsh=ODFnOGdocjBvazc=" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-    <a href="https://x.com/Socialprince7?t=-RM1I7BO3xX-REW-ccS9wA&s=09" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fa-brands fa-x"></i></a>
-    <a href="https://wa.me/qr/5HLQVSSQND4LG1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-    <a href="https://www.tiktok.com/@4zed2zed?_t=8rCYGFppRbT&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-    <a href="https://www.linkedin.com/in/felix-simon-9a4461257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-    <a href="https://github.com/ZEDFELIX" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
