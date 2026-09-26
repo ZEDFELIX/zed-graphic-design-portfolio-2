@@ -1,18 +1,21 @@
-# Zed — Graphic Design Portfolio
+# Felix Simon — Graphic Design Portfolio
 
-Static portfolio site for Zed, a graphic designer. Homepage with hero, work preview, services, about, and contact, plus a filterable `work.html` gallery and a `case.html` case-study page.
+**Canonical graphic design portfolio repository for ZED/Felix.**
+
+This is the primary repository for the graphic-design portfolio. New design work, case studies, services, responsive improvements and deployment changes should be made here.
 
 ## Pages
 
-- `index.html` — homepage
-- `work.html` — project gallery with category filter (branding, UI design, social media)
-- `case.html` — case-study view (reads a `?type=` query param)
+- `index.html` — portfolio homepage
+- `work.html` — filterable project gallery
+- `case.html` — case-study view
+- `style.css` — visual system and responsive styling
+- `script.js` — interactions and filtering
 
-## Deploy
+## Direction
 
-Push the folder and enable GitHub Pages. No build step. All images are referenced relatively from the repo root.
+The portfolio is design-first: graphic design, brand identity, social media design, UI/digital design and visual communication.
 
-## Assets
+## Deployment
 
-- Design images at the repo root: `brand identity (2).jpeg`, `logo.jpeg`, `brand guidlines.jpeg`, `website ui (2).jpeg`, `mobile ui.jpeg`, `dashboard ui.jpeg`, `social media design.jpeg`, `add design.jpeg`, `campaing poster.jpeg`, `website ui.jpeg`
-- `style.css` and `script.js` loaded from the repo root.
+This is the canonical portfolio codebase. Keep production changes here rather than in the legacy `portfolio-website` copy.
